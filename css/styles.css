@@ -1,0 +1,486 @@
+.snakes{
+  transition: transform 100ms ease-in-out;
+}
+
+ .testt{
+   position: absolute;
+   visibility: hidden;
+ }
+
+.redanimation{
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  font-weight: 1000;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
+}
+
+.snake98{
+  offset-path:path("M 120 20 80 30 70 40 70 50 70 60 70 70 75 80 85 90 95 100 105 110 120 120");
+ animation: move 700ms alternate ease;
+}
+@keyframes move {
+
+  100%{
+    offset-distance:100%;
+  }
+}
+
+.animations{
+  transform: rotateX(360deg) rotateY(360deg) rotateY(360deg) rotateX(360deg) rotateZ(360deg) rotateZ(360deg);
+  transition: transform 1s ease;
+}
+
+.animation1{
+  transform: rotateY(0deg);
+  transition: transform 100ms ease;
+}
+.animation2{
+  transform: rotateX(90deg) translateZ(-10px);
+  transition: transform 100ms ease;
+}
+.animation3{
+  transform: rotateY(90deg) translateZ(10px);
+  transition: transform 100ms ease;
+}
+.animation4{
+  transform: rotateY(-90deg) translateZ(-10px);
+  transition: transform 100ms ease;
+}
+.animation5{
+  transform: rotateX(-90deg) translateZ(10px);
+  transition: transform 100ms ease;
+}
+.animation6{
+  transform: rotateY(-180deg) translateX(-20px);
+  transition: transform 100ms ease;
+}
+
+body{
+  background-image: url("images/main2.png");
+}
+
+.bottom{
+  display: flex;
+   justify-content : space-between;
+  transform: rotateX(-90deg) translateZ(20px);
+}
+
+.bottom .dot:nth-of-type(2){
+  align-self: flex-end;
+}
+
+.back{
+  display: flex;
+  justify-content: space-between;
+  transform: rotateY(-180deg) translateZ(20px);
+}
+
+.back .dot{
+  margin-bottom: 2px;
+}
+
+
+.dice{
+  position: relative;
+  top:-55px;
+  left: 100px;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 3000px;
+}
+
+.diceouter{
+  position: absolute;
+
+}
+
+
+.dice1{
+  position: relative;
+  top: 55px;
+}
+
+
+
+.dot {
+   display: block;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   background-color:white;
+}
+
+
+.front{
+display: flex;
+justify-content: center;
+align-items: center;
+  transform: rotateX(0deg) translateZ(20px);
+}
+
+.grid-container{
+  height: 500px;
+  width:500px;
+  padding: 60px;
+  margin: 0 auto;
+  background-image: url("images/Snakes.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 10px solid #165470;
+  border-radius: 10px;
+}
+
+.homeImg{
+   position: absolute;
+   top: -8px;
+   left: -61px;
+   z-index: 3;
+}
+.homeDiv{
+  position: absolute;
+}
+
+@media only screen and (min-width:501px) and (max-width:1100px) {
+  .grid-container{
+    margin: 0 200px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  body{
+    background-image:url("images/main1.jpeg");
+  }
+  .grid-container{
+    margin: 0 -8px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
+  .dice{
+    position: relative;
+    top:375px;
+    left: 433px;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    transform-style: preserve-3d;
+    perspective: 3000px;
+  }
+
+  .diceouter{
+    position: absolute;
+
+  }
+
+  .dice1{
+    position: relative;
+    left: 550px;
+  }
+
+
+  .player1{
+    position: relative;
+    width: 150px;
+    top: 90px;
+    left: -261px;
+    height: 60px;
+    border-radius: 50px 14px 14px 50px;;
+    border:5px solid #ff0000;
+    transform: translateX(327px) translateY(430px);
+  }
+
+  .play1{
+    position: absolute;
+  }
+
+  .player2{
+    position: relative;
+    width: 150px;
+    top: 200px;
+    left: -261px;
+    height: 60px;
+    border-radius: 50px 14px 14px 50px;;
+    border:5px solid #9900ff;
+    transform: translateX(532px) translateY(320px) rotateY(180deg) ;
+  }
+
+  }
+
+
+.left{
+  display: flex;
+   justify-content : space-between;
+  transform: rotateY(-90deg) translateZ(20px);
+}
+
+.left .dot:nth-of-type(3) {
+align-self: flex-end;
+}
+
+.left .dot:nth-of-type(2) {
+  position: relative;
+  top: 7px;
+}
+
+
+
+.logoimg1{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 5px solid #ff8080;
+  margin-right: 7px;
+}
+
+.logoimg2{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 5px solid #cc80ff;
+  margin-right: 7px;
+}
+
+.piece1{
+  height: 30px;
+  width: 30px;
+  position:absolute;
+  top: -14px;
+  left: 50px;
+  font-weight: 1000;
+  color: white;
+  text-align: center;
+  transform: rotate(45deg);
+  font-size: 25px;
+  background-color: red;
+  border-radius: 50%;
+ box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
+
+}
+
+
+
+.pieceBox1{
+  height: 5px;
+  width: 43px;
+  background-color: #ff8080;
+  text-align: right;
+  border:3px solid #ff0000;
+  position: relative;
+  top: 192px;
+  left: -107px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.pieceCircle1{
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: -21px;
+  left: 43px;
+  border-radius: 50%;
+  border:5px solid #ff0000;
+   box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
+}
+
+.piece2{
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: -13px;
+  left: 50px;
+  font-weight: 1000;
+  color: white;
+  text-align: center;
+  transform: rotate(45deg);
+  font-size: 25px;
+  background-color: #751aff;
+  border-radius: 50%;
+ box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
+}
+
+.pieceBox2{
+  height: 5px;
+  width: 43px;
+  background-color: #cc80ff;
+  text-align: right;
+  border:3px solid #9900ff;
+  position: relative;
+  top: 290px;
+  left: -107px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.pieceCircle2{
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: -21px;
+  left: 43px;
+  border-radius: 50%;
+  border:5px solid #9900ff;
+   box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
+}
+
+.player1{
+  position: relative;
+  width: 150px;
+  top: 90px;
+  left: -261px;
+  height: 60px;
+  border-radius: 50px 14px 14px 50px;;
+  border:5px solid #ff0000;
+}
+
+.play1{
+  position: absolute;
+}
+
+.player2{
+  position: relative;
+  width: 150px;
+  top: 270px;
+  left: -261px;
+  height: 60px;
+  border-radius: 50px 14px 14px 50px;;
+  border:5px solid #9900ff;
+}
+
+.playerdice{
+  position: absolute;
+  top: 228px;
+  left: -263px;
+  width: 160px;
+  z-index: 1;
+}
+
+
+.right .column {
+display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right{
+  display: flex;
+  justify-content: space-between;
+  transform: rotateY(90deg) translateZ(20px);
+}
+
+.right .column {
+display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.side{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  padding: 9px;
+  background-color: red;
+  border-radius: 10%;
+  border:1px solid rgba(0,0,0,.5);
+  color: black;
+  text-align: center;
+  box-shadow: 1px 4px 3px #3f3f3f, inset -1px -6px 12px 0.4px #272626 ;
+}
+
+.side:hover{
+  transform: scale3d(1.2,1.2,1.2);
+  transition: transform 100ms ease-in-out;
+}
+
+.side1{
+  background-color: #751aff;
+}
+
+
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  transform: rotateX(90deg) translateZ(20px);
+}
+.top .column {
+display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top .column:nth-of-type(2) {
+justify-content: center;
+}
+
+.traclass{
+  transition: transform 700ms ease-in-out;
+}
+
+
+.ladder1x{
+  transition: transform 800ms ease;
+}
+
+.ladder1y{
+  transition: transform 550ms ease;
+}
+
+
+.ladder4x{
+  transition: transform 700ms ease;
+}
+
+.ladder4y{
+  transition: transform 550ms ease;
+}
+
+.ladder9x{
+  transition: transform 800ms ease;
+}
+
+.ladder9y{
+  transition: transform 730ms ease;
+}
+
+.ladder51x{
+  transition: transform 660ms ease;
+}
+
+.ladder51y{
+  transition: transform 800ms ease;
+}
+
+.ladder28x{
+  transition: transform 650ms ease-in-out;
+}
+
+.ladder28y{
+  transition: transform 900ms ease-in-out;
+}
+
+.ladder28x1{
+  transition: transform 660ms ease-in-out;
+}
+
+.ladder28y1{
+  transition: transform 700ms ease-in-out;
+}
+
+.ladder28x2{
+  transition: transform 600ms ease-in-out;
+}
+
+.ladder28y2{
+  transition: transform 740ms ease-in-out;
+}
